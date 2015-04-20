@@ -663,7 +663,7 @@ AMX_NATIVE_INFO
 		{
 			{"SetTimer_", n_SetTimer_},
 			{"SetTimerEx_", n_SetTimerEx_},
-			//{"KillTimer_", n_KillTimer_},
+			{"KillTimer_", n_KillTimer_},
 			{0,        0}
 		};
 
@@ -720,8 +720,8 @@ void
 PLUGIN_EXPORT int PLUGIN_CALL
 	AmxLoad(AMX * amx) 
 {
-	//Redirect(amx, "SetPlayerName", (ucell)n_SSCANF_SetPlayerName, &SetPlayerName);
-	//Redirect(amx, "SetPlayerName", (ucell)n_SSCANF_SetPlayerName, 0);
+	Redirect(amx, "SetPlayerName", (ucell)n_SSCANF_SetPlayerName, &SetPlayerName);
+	Redirect(amx, "SetPlayerName", (ucell)n_SSCANF_SetPlayerName, 0);
 	Redirect(amx, "SetTimer", (ucell)n_SetTimer, 0);
 	Redirect(amx, "KillTimer", (ucell)n_KillTimer, 0);
 	Redirect(amx, "SetTimerEx", (ucell)n_SetTimerEx, 0);
