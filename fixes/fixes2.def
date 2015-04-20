@@ -1,0 +1,8 @@
+LIBRARY	"FIXES2"
+EXPORTS
+	Supports
+	Load
+	Unload
+	AmxLoad
+	AmxUnload
+	ProcessTick
